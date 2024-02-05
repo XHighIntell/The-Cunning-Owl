@@ -1,0 +1,23 @@
+{
+    "typeAcquisition": {
+        "enable": true,
+        "include": [ "jquery" ]
+    },
+    "include": [
+        "**/*.ts",
+        "../../docs/static/lib/intell/intell.d.ts",
+        "../../docs/static/lib/blite/blite.d.ts",
+    ],
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "noEmitOnError": false,
+        "removeComments": false,
+        "sourceMap": false,
+        "declaration": true,
+        "target": "ES2022",
+        "module": "amd",
+        "composite": true,
+        "outFile": "../../docs/static/js/storyteller.js",
+    },
+    "compileOnSave": true,
+}

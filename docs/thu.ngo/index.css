@@ -1,0 +1,61 @@
+﻿body{margin:0}
+.spring{flex:1 1 auto}
+
+#story{position:absolute;left:0;right:0;top:0;bottom:0;background:#000;overflow:hidden}
+#story .moon-container{position:absolute;left:50%;top:50%;z-index:100}
+#story .moon{position:absolute;display:block;transform:translate(-50%, -50%);background-color:#b2b7bc;border-radius:50%;box-shadow:inset -20px 2px 0 0px #c0c3c9,0 0 10px 5px rgba(228,228,222,.4);animation:brilla-moon 4s alternate infinite;transition:all 2000ms linear}
+#story .moon>div{position:absolute;border-radius:50%;border:1px solid #adaca2;box-shadow:inset 2px -1px 0 0px #85868b;opacity:0.4}
+#story .moon div:nth-child(1){top:50%;left:10%;width:12%;height:12%}
+#story .moon div:nth-child(2){top:20%;left:38%;width:16%;height:16%}
+#story .moon div:nth-child(3){top:60%;left:45%;width:20%;height:20%}
+#story .moon.clickable{transition:all 2000ms linear,transform .5s;cursor:pointer}
+#story .moon.clickable:hover{transform:translate(-50%, -50%) scale(1.1)}
+
+@keyframes brilla-moon{
+	0%{box-shadow:inset -20px 2px 0 0px #c0c3c9,0 0 10px 5px rgba(228,228,222,.4)}
+	50%{box-shadow:inset -20px 2px 0 0px #c0c3c9,0 0 15px 8px rgba(228,228,222,.4)}
+}
+
+#story .Comet{position:absolute;height:1px;--head-color:#fff}
+#story .Comet{background:linear-gradient(to right,var(--head-color),#0000);border-radius:50% 0 0 50%;transform-origin:left center}
+
+#story .Star{position:absolute;width:15px;height:15px;transform:translate(-50%,-50%);z-index:10;pointer-events:none;background-size:15px 15px}
+#story .Fireworks{position:absolute;width:256px;height:256px;background:url(../static/img/fireworks-long.png);transform:translate(-50%,-50%) scale(.5);z-index:200;pointer-events:none}
+
+
+
+#story .butterfly-behind{position:absolute;bottom:0;left:0;right:0;top:0;background: 74% 85%/14% url(../static/img/avatar-frame/SPARKLES-FRAME.png) no-repeat;transform:rotate(-12deg);transform-origin:right bottom}
+#story .ground{position:absolute;bottom:0;left:0;right:0;top:0;background:bottom center url(../static/img/grass_foreground.png) no-repeat;background-size:100%;z-index:2;pointer-events:none;z-index:300}
+#story .butterfly1{position:absolute;bottom:0;left:0;right:0;top:0;background:1% 92%/14% url(../static/img/avatar-frame/SPARKLES-FRAME.png) no-repeat;transform:rotate(18deg);transform-origin:left bottom}
+#story .butterfly2{position:absolute;bottom:0;left:0;right:0;top:0;background:100% 92%/14% url(../static/img/avatar-frame/SPARKLES-FRAME.png) no-repeat;transform:scaleX(-1);filter:hue-rotate(127deg)}
+#story .butterfly3{position:absolute;bottom:0;left:0;right:0;top:0;background:1% 92%/14% url(../static/img/avatar-frame/SPARKLES-FRAME.png) no-repeat;transform:scaleX(-1);filter:hue-rotate(217deg)}
+
+
+#story .new-year-modal{display:flex;flex-direction:column;position:relative;height:100%}
+#story .new-year-modal .content-modal{position:relative;width:690px;height:225px;margin:0 auto;padding:25px 15px;z-index:2;border:2px solid #a89a63;z-index:100}
+#story .new-year-modal .content-modal .border-top{position:absolute;left:0;right:0;top:-10px;height:20px;background:url(elden-ring-border-leaf.png) round;background-size:auto 20px}
+#story .new-year-modal .content-modal .border-bot{position:absolute;left:0;right:0;bottom:-10px;height:20px;background:url(elden-ring-border-leaf.png) round;background-size:auto 20px;transform: rotateX(180deg);transform-origin:left center}
+
+
+#story .new-year-modal .content-modal>.title{margin-left:220px;color:transparent;-webkit-background-clip:text;background-clip:text;font-size:2em;font-family:WarSans;text-shadow: 0 0 4px black;background-image:linear-gradient(90deg,#ff0000,#820000);font-family:WarSans}
+#story .new-year-modal .content-modal>.message{margin:15px 0;font-family:'Noto Sans';color:transparent;-webkit-background-clip:text;background-clip:text;text-shadow:0 0 4px black;background-image:linear-gradient(180deg,#ffffff,#6e6e6e);font-weight:600}
+#story .new-year-modal .content-modal .highlight-bg{position:absolute;left:60px;bottom:20px;width:400px;background:left center url(elden-ring-border.png) no-repeat;background-size:contain;filter:hue-rotate(148deg);z-index:-1}
+#story .new-year-modal .content-modal .highlight-message{text-align:center;font-size:2em;text-shadow:0 0 4px black;background:left center/contain url(elden-ring-border.png) no-repeat, linear-gradient(90deg,#d6ff00,#ff5700);-webkit-background-clip:text;background-clip:text;font-family:WarSans;color:transparent}
+
+
+#story .new-year-modal .content-modal .avatar1{position:absolute;left:90px;top:-63px;width:125px;height:125px;background:#2c3d7c url(owl.svg) no-repeat;background-size:contain}
+#story .new-year-modal .content-modal .avatar1 .AGHANIM-FRAME{position:absolute;left:-13px;right:-13px;top:-13px;bottom:-13px;background:url(../static/img/avatar-frame/CRYSTALLID-FRAME.png) no-repeat;background-size:contain}
+#story .new-year-modal .content-modal .avatar1 .PORTAL-BLUE-FRAME{position:absolute;left:-13px;right:-13px;top:-13px;bottom:-13px;background:url(../static/img/avatar-frame/PORTAL-BLUE-FRAME.png) no-repeat;background-size:contain}
+#story .new-year-modal .content-modal .avatar1 .SPARKLES-FRAME{position:absolute;left:-13px;right:-13px;top:-13px;bottom:-13px;background:url(../static/img/avatar-frame/SPARKLES-FRAME.png) no-repeat;background-size:contain;filter:hue-rotate(293deg)}
+
+#story .new-year-modal .content-modal .avatar2{position:absolute;right:90px;bottom:-50px;width:125px;height:125px;background:url(thu-avatar.jpg) no-repeat;background-size:contain}
+#story .new-year-modal .content-modal .avatar2 .AGHANIM-FRAME{position:absolute;left:-13px;right:-13px;top:-13px;bottom:-13px;background:url(../static/img/avatar-frame/AGHANIM-FRAME.png) no-repeat;background-size:contain;filter:sepia(1)}
+#story .new-year-modal .content-modal .avatar2 .CRYSTALLID-CONTAINER{position:relative;width:100%;height:100%;overflow:hidden}
+#story .new-year-modal .content-modal .avatar2 .CRYSTALLID-FRAME{position:absolute;left:-13px;right:-13px;top:-13px;bottom:-13px;background:url(../static/img/avatar-frame/CRYSTALLID-FRAME.png) no-repeat;background-size:contain;opacity:.6;filter:hue-rotate(90deg);}
+#story .new-year-modal .content-modal .avatar2 .CRYSTALLID-CONTAINER>.CRYSTALLID-FRAME{left:-16px;right:-17px;top:-16px;bottom:-17px}
+    
+       
+#story .new-year-modal .content-modal .video-container{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;z-index:-1;opacity:0.7;overflow:hidden;pointer-events:none}
+#story .new-year-modal .content-modal .BURNING-GEOMETRY{position: absolute;left:0;right:0;width:100%}
+
+video::-webkit-media-controls{display:none}
