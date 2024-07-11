@@ -1,4 +1,20 @@
-﻿body{margin:0}
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face{font-family:"WarSans";font-style:normal;font-weight:400;font-display:swap;src:url(/static/font/WarSans.woff) format("woff")}
+
+.CONTAINER{}
+.CONTAINER .CONTENT{width:800px;margin:0 auto}
+
+.comet{position:absolute}
+.comet::before{content:'';display:block;width:29px;height:1px;background:linear-gradient(to right,#0000,#fff);border-radius:0 50% 50% 0;transition:all 2000ms linear;transform:translateX(300px)}
+
+.comet2{position:absolute;width:29px;height:1px;--head-color:#fff}
+.comet2{background:linear-gradient(to right,var(--head-color),#0000);border-radius:50% 0 0 50%;transition:all 2000ms linear;transform-origin:left center}
+
+.comet3{position:absolute;height:1px;--head-color:#fff}
+.comet3{background:linear-gradient(to right,var(--head-color),#0000);border-radius:50% 0 0 50%;transform-origin:left center}
+
+
+body{margin:0}
 .spring{flex:1 1 auto}
 
 #story{position:absolute;left:0;right:0;top:0;bottom:0;background:#000;overflow:hidden}

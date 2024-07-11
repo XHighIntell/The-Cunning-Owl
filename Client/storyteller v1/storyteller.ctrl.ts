@@ -1,5 +1,5 @@
 ﻿
-namespace storyteller.ctrl {
+namespace storytellerv1.ctrl {
 
 
     export class Comet2 {

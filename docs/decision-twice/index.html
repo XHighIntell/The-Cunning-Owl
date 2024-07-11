@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Decision Twice</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image" href="/favicon.png">
+
+    <script src="../static/lib/jquery/jquery-3.3.1.min.js" defer></script>
+    <script src="../static/lib/intell/intell.min.js" defer></script>
+
+    <script src="index.js" defer></script>
+    <link href="index.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="width:0;height:0;overflow:hidden">
+        <svg>
+            <symbol viewBox="0 0 478 478" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="SVG_Email">
+                <path d="M460.8,68.267H17.067l221.867,182.75L463.309,68.779C462.488,68.539,461.649,68.368,460.8,68.267z"></path>
+                <path d="M249.702,286.31c-6.288,5.149-15.335,5.149-21.623,0L0,98.406v294.127c0,9.426,7.641,17.067,17.067,17.067H460.8    c9.426,0,17.067-7.641,17.067-17.067V100.932L249.702,286.31z"></path>
+            </symbol>
+            <symbol viewBox="0 0 512 512" class="" role="presentation" focusable="false" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="SVG_Website" data-type="335">
+                <path xmlns="http://www.w3.org/2000/svg" d="m437.335 75.082c-100.1-100.102-262.136-100.118-362.252 0-100.103 100.102-100.118 262.136 0 362.253 100.1 100.102 262.136 100.117 362.252 0 100.103-100.102 100.117-262.136 0-362.253zm-10.706 325.739c-11.968-10.702-24.77-20.173-38.264-28.335 8.919-30.809 14.203-64.712 15.452-99.954h75.309c-3.405 47.503-21.657 92.064-52.497 128.289zm-393.338-128.289h75.309c1.249 35.242 6.533 69.145 15.452 99.954-13.494 8.162-26.296 17.633-38.264 28.335-30.84-36.225-49.091-80.786-52.497-128.289zm52.498-160.936c11.968 10.702 24.77 20.173 38.264 28.335-8.919 30.809-14.203 64.712-15.452 99.954h-75.31c3.406-47.502 21.657-92.063 52.498-128.289zm154.097 31.709c-26.622-1.904-52.291-8.461-76.088-19.278 13.84-35.639 39.354-78.384 76.088-88.977zm0 32.708v63.873h-98.625c1.13-29.812 5.354-58.439 12.379-84.632 27.043 11.822 56.127 18.882 86.246 20.759zm0 96.519v63.873c-30.119 1.877-59.203 8.937-86.246 20.759-7.025-26.193-11.249-54.82-12.379-84.632zm0 96.581v108.254c-36.732-10.593-62.246-53.333-76.088-88.976 23.797-10.817 49.466-17.374 76.088-19.278zm32.646 0c26.622 1.904 52.291 8.461 76.088 19.278-13.841 35.64-39.354 78.383-76.088 88.976zm0-32.708v-63.873h98.625c-1.13 29.812-5.354 58.439-12.379 84.632-27.043-11.822-56.127-18.882-86.246-20.759zm0-96.519v-63.873c30.119-1.877 59.203-8.937 86.246-20.759 7.025 26.193 11.249 54.82 12.379 84.632zm0-96.581v-108.254c36.734 10.593 62.248 53.338 76.088 88.977-23.797 10.816-49.466 17.373-76.088 19.277zm73.32-91.957c20.895 9.15 40.389 21.557 57.864 36.951-8.318 7.334-17.095 13.984-26.26 19.931-8.139-20.152-18.536-39.736-31.604-56.882zm-210.891 56.882c-9.165-5.947-17.941-12.597-26.26-19.931 17.475-15.394 36.969-27.801 57.864-36.951-13.068 17.148-23.465 36.732-31.604 56.882zm.001 295.958c8.138 20.151 18.537 39.736 31.604 56.882-20.895-9.15-40.389-21.557-57.864-36.951 8.318-7.334 17.095-13.984 26.26-19.931zm242.494 0c9.165 5.947 17.942 12.597 26.26 19.93-17.475 15.394-36.969 27.801-57.864 36.951 13.067-17.144 23.465-36.729 31.604-56.881zm26.362-164.302c-1.249-35.242-6.533-69.146-15.452-99.954 13.494-8.162 26.295-17.633 38.264-28.335 30.84 36.225 49.091 80.786 52.497 128.289z"></path>
+
+            </symbol>
+            <symbol viewBox="0 0 16 16" class="" role="presentation" focusable="false" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="SVG_Github">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+
+            </symbol>
+
+            <symbol viewBox="0 0 514 514" class="" role="presentation" focusable="false" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="SVG_Phone">
+                <path d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72    c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68    c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44    l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z"></path>
+            </symbol>
+        </svg>
+    </div>
+
+    <div id="overview">
+        <div class="video-container">
+            <video class="NEBULA" controls playsinline loop autoplay muted>
+                <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/504400/6b570a8ece2b844f3a8724da571cd6b527a4793c.webm" type="video/webm">
+                <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/504400/2b0792025824dfe8a1aa161ebe74ddee128d39cd.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="contact">
+            <div class="avatar">
+                <div class="PORTAL-BLUE-FRAME"></div>
+                <div class="SPARKLES-FRAME"></div>
+            </div>
+            <div class="display">
+                <div class="name NAME">???</div>
+                <div class="role">Indie Developer</div>
+            </div>
+            <i class="spring"></i>
+            <div class="details">
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Website"></use></svg>
+                    <a class="value" href="https://xhighintell.com" target="_blank">xhighintell.com</a>
+                </div>
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Github"></use></svg>
+                    <a class="value" href="https://github.com/XHighIntell" target="_blank">github.com/XHighIntell</a>
+                </div>
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Email"></use></svg>
+                    <div class="value EMAIL">???</div>
+                </div>
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Phone"></use></svg>
+                    <div class="value PHONE">???</div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div id="gate">
+        <div class="name">Decision Twice</div>
+    </div>
+    <div id="profiles">
+             
+        <div class="panel1">
+
+            <div class="story">
+                <div class="title">About</div>
+                <div class="description">
+                    <div class="first-letter">A multiple roles developer with experience in many positions from decision core structure to graphic user interface. Highly skilled passionate developer with over 5 years in corporate experience. 
+                    Have much experience in optimizations, doing it in a way where implements don't increase the performance cost.</div>
+                    <div class="first-letter">Achieved few memorable successes and valuable lessons in tons of failed projects.</div>
+                </div>                
+            </div>
+
+            <div class="story">
+                <div class="title">Preference</div>
+                <div class="description">
+                    <div class="first-letter">Avoid using hype technology, adding unnecessary dependencies or services without a reasonable reason. Reduce cost of project by writing optimized code and picking the right services.</div>
+                    <div class="first-letter">Love inventing a better way or doing crazy ideas to boost my creativity. Have the ability to take many roles and take responsibility for the whole project alone.</div>
+                </div>                
+            </div>
+
+            <div class="story">
+                <div class="title">Keywords (Skills)</div>
+                <div class="description">
+                    <div>A few keywords for my next destiny:</div>
+
+                    <div class="keyword-group">
+                        <span class="name">Preferred Languages:</span>
+                        <span class="value">C#, TSQL, Javascript, Typescript, HTML, CSS</span>    
+                    </div>
+                    <div class="keyword-group">
+                        <span class="name">Others Languages:</span>
+                        <span class="value">NodeJS, Powershell, Batch, LUA</span>
+                    </div>
+                    <div class="keyword-group">
+                        <span class="name">Services:</span>
+                        <span class="value">Azure, <a href="https://stripe.com">Stripe</a>, <a href="https://paddle.com">Paddle</a></span>
+                    </div>
+                    <div class="keyword-group">
+                        <span class="name">Others:</span>
+                        <span class="value">WebSocket, Chromium Extension</span>
+                    </div>
+                </div>                
+            </div>
+
+        </div>
+        <div class="panel2">
+            <div style="user-select:none">
+                <video controls playsinline loop autoplay muted>
+                    <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/788100/b2d245ad8d70f3c990a1c6a952ed140ed4732401.webm" type="video/webm">
+                    <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/788100/9885d2b3e73ef007097b6523310e6f2f8ac6c23a.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="header">
+                <div class="avatar">
+                    <div class="PORTAL-BLUE-FRAME"></div>
+                    <div class="SPARKLES-FRAME"></div>
+                </div>
+                <div class="display">
+                    <div class="name NAME"></div>
+                    <div class="role">Indie Developer</div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Website"></use></svg>
+                    <a class="value" href="https://xhighintell.com" target="_blank">xhighintell.com</a>
+                </div>
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Github"></use></svg>
+                    <a class="value" href="https://github.com/XHighIntell" target="_blank">github.com/XHighIntell</a>
+                </div>
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Email"></use></svg>
+                    <div class="value EMAIL"></div>
+                </div>
+                <div class="item">
+                    <svg class="name"><use href="#SVG_Phone"></use></svg>
+                    <div class="value PHONE"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="let-view-on-website">View on the website for better experience</div>
+    </div>
+    <div id="projects">
+        <div class="video-container" style="display:none">
+            <video class="NEBULA" controls playsinline loop autoplay muted>
+                <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/570/982491acceb6c9dde0d5e49dab1e7540c5faa1de.webm" type="video/webm">
+                <source src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/570/8144f2b875ebda693f4dec2f7c43a7a1a916375f.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div class="stone">
+            <div class="title">HIGHLIGHT PROJECTS</div>
+        </div>
+
+        <div class="content">
+
+            <div class="projects">
+
+                <div class="item">
+                    <div class="panel1">
+                        <div class="name">Opportunity</div>
+                        <div class="tags">
+                            <div class="tag">Trading</div>
+                            <div class="tag">Bot</div>
+                        </div>
+                        <div class="date">2023 - 2024</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+                        <div>A series of projects about trading bots. The first idea begins with probability problems in mathematics and quickly turns into an automatic trading system. Target both quick and long term trading by understanding the zero-sum game and the panics of the market.</div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="panel1">
+                        <div class="name">jintellv2</div>
+                        <div class="tags">
+                            <div class="tag">Library</div>
+                        </div>
+                        <div class="date">2022</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+                        jintellv2 is the second generation of jintell. My purpose is to build a reusable javascript library with high quality of documents and examples. This project is the most used in my personal projects. Library is always useful preparation for any next projects.
+                        <div>
+                            <a href="https://github.com/XHighIntell/jintellv2">https://github.com/XHighIntell/jintellv2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="panel1">
+                        <div class="name">Proton</div>
+                        <div class="tags">
+                            <div class="tag">Library</div>
+                        </div>
+                        <div class="date">2021</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+                        Have you ever dreamt about a cooling user interface for your desktop application without dealing with a thousand lines of gdi+ code? HTML/CSS is key.
+                        <a href="https://www.electronjs.org/" target="_blank">Electron</a> is good but it is backed by Javascript. Opposite Electron, this Proton is backed by .NET so we have more opportunity for a larger library support.
+                        <div>
+                            <a href="https://github.com/XHighIntell/Proton">https://github.com/XHighIntell/Proton</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="panel1">
+                        <div class="name">Dota 12v12 - Ranking</div>
+                        <div class="description">Another Failed Project</div>
+                        <div class="tags">
+                            <div class="tag">Gaming</div>
+                        </div>
+                        <div class="date">2021</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+<div>
+    A custom map in Dota 2, that was built on Source 2 engine. Lua, Javascript and Panorama are languages used in this project.  Panorama has the same idea as HTML with different styles and rules. The most hated part of this project is the document, Dota 2 doesn't provide a full document about each function they had, and lacks example codes. At worst, I have to download maps, and decompile it to see how other developers do it in their game; I have to find ways around to achieve the goal.
+</div>
+                        <div>
+                            <a href="https://xhighintell.com/games/dota-12v12">https://xhighintell.com/games/dota-12v12</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="panel1">
+                        <div class="name">Travian Toolkit 3.0</div>
+                        <div class="tags">
+                            <div class="tag">Gaming</div>
+                            <div class="tag">Bots</div>
+                        </div>
+                        <div class="date">2020</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+                        <div>
+The first success series projects in my career. The first time I earned money from selling digital products. The payment system quickly changed from the built-in payment method of Chrome Web Store to independent third party <a href="https://www.paddle.com/"></a> Paddle.
+                        </div>
+                        <div>
+                            <a href="https://xhighintell.com/apps/travian-toolkit-3">https://xhighintell.com/apps/travian-toolkit-3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="panel1">
+                        <div class="name">jintell</div>
+                        <div class="tags">
+                            <div class="tag">Library</div>
+                        </div>
+                        <div class="date">2018</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+                        <div>
+A JavaScript open-source library designed to simplify HTML controls and give a better life for front-end developers. 
+This kind of project plays an important role in many of my projects and it will continue growing and many features will be added to fullfied requirements of others projects.
+                        </div>
+                        <div>
+                            <a href="https://github.com/XHighIntell/jintell">https://github.com/XHighIntell/jintell</a>
+                        </div>
+                    </div>
+                </div>
+<div class="item">
+                <div class="panel1">
+                        <div class="name">Path of Defender</div>
+                        <div class="description">A Failed Startup</div>
+                        <div class="tags">
+                            <div class="tag">Gaming</div>
+                        </div>
+                        <div class="date">2015 - 2017</div>
+                        <div class="stars"></div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="panel2">
+                        <div>
+<a href="https://github.com/sharpdx/SharpDX">SharpDX</a> is used for DirectX bindings in this project. I also created a library engine on top of SharpDX for drawing 2d purposes, that helps the working process become easier.
+This project takes a lot of time and the result is a big failure, but it is well worth the waste. There are many things to learn from it, an open-eyes knowledge in my life.
+In the end, I was powerless but my mindset wasn't. Actually, I was feeling much better when I decided to give up. I'm not ready for this type of project. It is my wish to see another project returned from the great beyond.
+                        </div>
+                        <div>
+                            <a href="https://github.com/XHighIntell/path-of-defender">https://github.com/XHighIntell/path-of-defender</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="last-words">
+                <div class="line">And many failed and memorable projects during my journey<div class="padding"></div></div>
+                <div class="line"><div class="padding"></div>Each of them has its own milestone and innovation in my coding style</div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+</body>
+</html>

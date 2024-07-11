@@ -6,7 +6,6 @@
     "include": [
         "**/*.ts",
         "../../docs/static/lib/intell/intell.d.ts",
-        "../../docs/static/lib/blite/blite.d.ts",
     ],
     "compilerOptions": {
         "noImplicitAny": false,
@@ -17,7 +16,7 @@
         "target": "ES2022",
         "module": "amd",
         "composite": true,
-        "outFile": "../../docs/static/js/storyteller.js",
+        "outFile": "../../docs/static/js/storyteller v1/storyteller.js",
     },
     "compileOnSave": true,
 }

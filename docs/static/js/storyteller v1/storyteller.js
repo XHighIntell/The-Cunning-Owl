@@ -1,5 +1,5 @@
-var storyteller;
-(function (storyteller) {
+var storytellerv1;
+(function (storytellerv1) {
     var ctrl;
     (function (ctrl) {
         class Comet2 {
@@ -297,16 +297,16 @@ var storyteller;
             }
         }
         ctrl.Star = Star;
-    })(ctrl = storyteller.ctrl || (storyteller.ctrl = {}));
-})(storyteller || (storyteller = {}));
-var storyteller;
-(function (storyteller) {
+    })(ctrl = storytellerv1.ctrl || (storytellerv1.ctrl = {}));
+})(storytellerv1 || (storytellerv1 = {}));
+var storytellerv1;
+(function (storytellerv1) {
     function radToDeg(rad) {
         return rad / Math.PI * 180;
     }
-    storyteller.radToDeg = radToDeg;
+    storytellerv1.radToDeg = radToDeg;
     function degToRad(deg) {
         return deg * Math.PI / 180;
     }
-    storyteller.degToRad = degToRad;
-})(storyteller || (storyteller = {}));
+    storytellerv1.degToRad = degToRad;
+})(storytellerv1 || (storytellerv1 = {}));
