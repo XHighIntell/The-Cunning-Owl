@@ -6,17 +6,17 @@
 
 
 
-    const objects: storyteller.ctrl.StoryObject[] = [];
+    const objects: storytellerv1.ctrl.StoryObject[] = [];
 
     for (let i = 0; i < 20; i++) {
-        const star = new storyteller.ctrl.Star($stars[0]);
+        const star = new storytellerv1.ctrl.Star($stars[0]);
         star.x = Math.random() * window.innerWidth;
         star.y = Math.random() * window.innerHeight;
         objects.push(star);
     }
     
     const elementMoonContainer = $moon_container[0];
-    const moon = new storyteller.ctrl.Moon($moon_container[0]);
+    const moon = new storytellerv1.ctrl.Moon($moon_container[0]);
     moon.width = 300;
     moon.height = 300;
     let moonAlpha = 0;
@@ -25,7 +25,7 @@
 
     setInterval(function() {
         if (Math.random() < .5) {
-            const comet = new storyteller.ctrl.Comet($root[0]);
+            const comet = new storytellerv1.ctrl.Comet($root[0]);
             if (Math.random() > .5) {
                 comet.x = Math.random() * window.innerWidth;
             } else {
@@ -42,7 +42,7 @@
 
             objects.push(comet);
         } else {
-            const comet = new storyteller.ctrl.Comet($root[0]);
+            const comet = new storytellerv1.ctrl.Comet($root[0]);
             
             comet.x = Math.random() * window.innerWidth;
             comet.y = Math.random() * window.innerHeight;
@@ -71,7 +71,7 @@
         if (e.button == 0) {
             const count = Math.round(7 + Math.random() * 7);
             for (let i = 0; i < count; i++) {
-                const firework = new storyteller.ctrl.Fireworks($root[0]);
+                const firework = new storytellerv1.ctrl.Fireworks($root[0]);
                 firework.x = e.clientX + Math.random() * 300 - 150;
                 firework.y = e.clientY + Math.random() * 300 - 150;
                 firework.random();
@@ -104,7 +104,7 @@
 
         if (moonAlpha < 80) {
             moonAlpha += 0.1;
-            let rad = storyteller.degToRad(moonAlpha);
+            let rad = storytellerv1.degToRad(moonAlpha);
             elementMoonContainer.style.left = 90 * Math.cos(rad) + '%';
             elementMoonContainer.style.top = 100 - 90 * Math.sin(rad) + '%';
             elementMoonContainer.style.transform = 'scale(' + (1.2 - moonAlpha / 80 * 0.7) + ')';

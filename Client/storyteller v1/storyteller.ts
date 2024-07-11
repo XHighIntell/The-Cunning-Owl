@@ -1,5 +1,5 @@
 ﻿
-namespace storyteller {
+namespace storytellerv1 {
     export function radToDeg(rad: number): number {
         return rad / Math.PI * 180;
     }

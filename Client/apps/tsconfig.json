@@ -5,9 +5,10 @@
     },
     "include": [
         "**/*.ts",
+        "../wwwroot/static/lib/intell/intell.d.ts",
     ],
     "references": [
-        { "path": "../storyteller/tsconfig.json" }
+        { "path": "../storyteller v1/tsconfig.json" }
     ],
     "compilerOptions": {
         "noImplicitAny": false,

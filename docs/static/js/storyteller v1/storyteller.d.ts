@@ -1,6 +1,6 @@
-declare namespace storyteller.canvas {
+declare namespace storytellerv1.canvas {
 }
-declare namespace storyteller.ctrl {
+declare namespace storytellerv1.ctrl {
     class Comet2 {
         constructor();
         element: HTMLDivElement;
@@ -79,7 +79,7 @@ declare namespace storyteller.ctrl {
         update(elapsedTime: number): void;
     }
 }
-declare namespace storyteller {
+declare namespace storytellerv1 {
     function radToDeg(rad: number): number;
     function degToRad(deg: number): number;
 }
